@@ -7,8 +7,6 @@ jobs:
         image: fredoo404/build
     steps:
         - name: Test ls 1
-          run: ls -l /github/
-        - name: Test ls 2
-          run: ls -l /github/foobar/
+          run: ls -l /github/home/
         - name: Hello world
           run: python main.py
