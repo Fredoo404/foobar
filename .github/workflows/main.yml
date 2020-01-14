@@ -7,9 +7,9 @@ jobs:
         image: fredoo404/build
     steps:
         - uses: actions/checkout@master
+          with:
+              entrypoint: sudo chown -R circleci /github && chmod -R 777 /github
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
           run: python ./main.py
-          with:
-              entrypoint: sudo chown -R circleci /github && chmod -R 777 /github
