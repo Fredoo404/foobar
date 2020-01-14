@@ -2,7 +2,8 @@ name: my first github action
 on: [push]
 jobs:
   build:
-    container: fredoo404:build
+    container: 
+        image: fredoo404:build
     steps:
         - name: Hello world
           run: python main.py
