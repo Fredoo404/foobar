@@ -2,6 +2,7 @@ name: my first github action
 on: [push]
 jobs:
   build:
+    runs-on: ubuntu-latest
     container: 
         image: fredoo404:build
     steps:
