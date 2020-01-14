@@ -12,4 +12,4 @@ jobs:
         - name: Hello world
           run: python ./main.py
           with:
-              entrypoint: "sudo chown -R circleci /github && chmod -R 777 /github"
+              entrypoint: sudo chown -R circleci /github && chmod -R 777 /github
