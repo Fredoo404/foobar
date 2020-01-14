@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
     name: Test build
-    runs-on: fredoo404/build
+    runs-on: fredoo404:build
     steps:
         - name: Hello world
           run: python main.py
