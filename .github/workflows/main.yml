@@ -2,8 +2,7 @@ name: my first github action
 on: [push]
 jobs:
   build:
-    name: Test build
-    runs-on: fredoo404:build
     steps:
         - name: Hello world
+          uses: docker://fredoo404:build
           run: python main.py
