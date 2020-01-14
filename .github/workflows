@@ -1,0 +1,9 @@
+name: my first github action
+on: [push]
+jobs:
+  build:
+    name: Test build
+    runs-on: fredoo404/build
+    steps:
+        - name: Hello world
+          run: python main.py
