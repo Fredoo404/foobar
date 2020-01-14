@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     container: 
         image: fredoo404/build
-    volumes:
-        - /home/runner:/test
+        volumes:
+            - /home/runner:/test
     steps:
         - name: Test ls 1
           run: ls -l /test
