@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: 
-        image: fredoo404:build
+        image: fredoo404/build
     steps:
         - name: Hello world
           run: python main.py
