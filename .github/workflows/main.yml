@@ -8,7 +8,7 @@ jobs:
     steps:
         - uses: actions/checkout@master
           with:
-              entrypoint: sudo chown -R circleci /github && chmod -R 777 /github
+              entrypoint: sudo chown -R circleci /github && sudo chmod -R 777 /github
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
