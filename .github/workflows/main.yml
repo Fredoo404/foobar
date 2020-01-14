@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     container: 
         image: fredoo404/build
+        with:
+            entrypoint: "sudo chown -R circleci /github && chmod -R 777 /github"
     steps:
         - uses: actions/checkout@master
         - name: Test ls 1
