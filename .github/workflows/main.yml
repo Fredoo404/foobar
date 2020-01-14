@@ -5,10 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     container: 
         image: fredoo404/build
-        volumes:
-            - /home/runner:/test
     steps:
         - name: Test ls 1
-          run: ls -l /test
+          run: ls -l 
         - name: Hello world
-          run: python main.py
+          run: python ./main.py
