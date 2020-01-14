@@ -3,8 +3,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: 
-        image: fredoo404/build
+    #    container: 
+    #        image: fredoo404/build
     steps:
         - name: Test ls 1
           run: ls -l 
