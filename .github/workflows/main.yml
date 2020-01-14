@@ -7,8 +7,6 @@ jobs:
         image: fredoo404/build
     steps:
         - name: Test ls 1
-          run: pwd
-        - name: Test ls 2
-          run: ls -l /
+          run: ls -l
         - name: Hello world
           run: python main.py
