@@ -7,7 +7,7 @@ jobs:
         image: fredoo404/build
     steps:
         - name: Fix
-          run: sudo chown -R circleci /github && sudo chmod -R 777 /github
+          run: sudo chown -R circleci /__w && sudo chmod -R 777 /__w
         - uses: actions/checkout@master
         - name: Test ls 1
           run: ls -l 
