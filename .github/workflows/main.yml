@@ -13,3 +13,5 @@ jobs:
           run: ls -l 
         - name: Hello world
           run: python ./main.py
+          env: 
+            MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
