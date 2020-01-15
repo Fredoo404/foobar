@@ -1,6 +1,8 @@
 name: my first github action on dev branch
 on: 
   push:
+      branch:
+          - develop
   repository_dispatch:
       types: test-dev
 jobs:
