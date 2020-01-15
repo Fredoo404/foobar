@@ -2,5 +2,7 @@
 
 import os
 
-value = os.environ["MY_SECRET_ENV"]
-print(value)
+value1 = os.environ["MY_SECRET_ENV"]
+value2 = os.environ["secret"]
+print(value1)
+print(value2)
