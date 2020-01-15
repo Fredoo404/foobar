@@ -12,4 +12,4 @@ jobs:
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
-          uses: ./.github/hello-world-action
+          uses: ./.github/actions/hello-world-action
