@@ -2,7 +2,7 @@ name: my first github action on dev branch
 on: 
   push:
   repository_dispatch:
-      types: test-call
+      types: test
 jobs:
   build:
     runs-on: ubuntu-latest
