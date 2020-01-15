@@ -15,7 +15,7 @@ jobs:
           run: sudo chown -R circleci /__w && sudo chmod -R 777 /__w
         - uses: actions/checkout@master
           with:
-            ref: develop
+            ref: {{ github.ref }}
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
