@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - develop
+    repository_dispatch:
+      event_action: test_call
 jobs:
   build:
     runs-on: ubuntu-latest
