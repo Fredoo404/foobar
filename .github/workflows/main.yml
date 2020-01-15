@@ -11,4 +11,4 @@ jobs:
         - uses: actions/checkout@master
         - name: Test ls 1
           run: ls -l 
-        - uses: .github/actions/hello-world-action
+        - uses: ./.github/actions/hello-world-action
