@@ -1,5 +1,8 @@
-name: my first github action
-on: [push, repository_dispatch]
+name: my first github action on dev branch
+on: 
+  push:
+    branches:
+      - develop
 jobs:
   build:
     runs-on: ubuntu-latest
