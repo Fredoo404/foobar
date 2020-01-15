@@ -11,7 +11,7 @@ jobs:
     steps:
         - name: Fix
           run: sudo chown -R circleci /__w && sudo chmod -R 777 /__w
-        - uses: actions/checkout@master
+        - uses: actions/checkout@develop
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
