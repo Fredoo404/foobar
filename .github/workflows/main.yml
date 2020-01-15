@@ -1,5 +1,8 @@
-name: my first github action
-on: [push]
+name: my first github action on dev branch
+on: 
+  push:
+    branches:
+      - develop
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,4 +17,3 @@ jobs:
         - name: Hello world
           run: python ./main.py
           env:
-              MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
