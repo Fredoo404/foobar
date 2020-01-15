@@ -1,7 +1,0 @@
-jobs:
-  my_first_job:
-    steps:
-      - name: Hello world
-        run: python ./main.py
-        env: 
-          MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
