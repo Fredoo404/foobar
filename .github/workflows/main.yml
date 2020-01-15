@@ -12,3 +12,6 @@ jobs:
         - name: Test ls 1
           run: ls -l 
         - uses: ./.github/actions/hello-world-action
+          env: 
+            MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
+            secret: ${{ secrets.MY_SECRET_ENV }}
