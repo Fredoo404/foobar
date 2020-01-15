@@ -14,4 +14,3 @@ jobs:
         - uses: ./.github/actions/hello-world-action
           env: 
             MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
-            secret: ${{ secrets.MY_SECRET_ENV }}
