@@ -1,5 +1,8 @@
 name: my first github action on dev branch
-on: [push, repository_dispatch]
+on: 
+  push:
+  repository_dispatch:
+      types: test-call
 jobs:
   build:
     runs-on: ubuntu-latest
