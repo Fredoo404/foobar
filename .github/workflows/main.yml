@@ -2,7 +2,7 @@ name: my first github action on dev branch
 on: 
   push:
   repository_dispatch:
-      types: test
+      types: test-dev
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,6 +12,8 @@ jobs:
         - name: Fix
           run: sudo chown -R circleci /__w && sudo chmod -R 777 /__w
         - uses: actions/checkout@master
+          with:
+            ref: develop
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
