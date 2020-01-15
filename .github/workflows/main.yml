@@ -12,11 +12,4 @@ jobs:
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
-          run: python ./main.py
-          env: 
-            MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
-            secret: ${{ secrets.MY_SECRET_ENV }}
-        - name: Slack Notification
-          uses: rtCamp/action-slack-notify@master
-          env:
-            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          uses: ./.github/hello-world-action
