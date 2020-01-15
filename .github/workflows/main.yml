@@ -2,7 +2,7 @@ name: my first github action on dev branch
 on: 
   push:
       branch:
-          - {{ github.ref }}
+          - develop
   repository_dispatch:
       types: test-dev
 jobs:
