@@ -1,4 +1,4 @@
-name: my first github action on dev branch
+name: test 2
 on: 
   push:
       branches:
