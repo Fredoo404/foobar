@@ -4,7 +4,7 @@ on:
       branches:
           - develop
   repository_dispatch:
-      types: test-aaaabbb
+      types: test-call
 jobs:
   build:
     runs-on: ubuntu-latest
