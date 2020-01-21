@@ -5,7 +5,7 @@ on:
           - develop
   repository_dispatch:
       types: test-aaaabbb
-      client_payload:
+      payload:
           value: test1
 jobs:
   build:
