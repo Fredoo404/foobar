@@ -5,6 +5,8 @@ on:
           - develop
   repository_dispatch:
       types: test-aaaabbb
+      client_payload:
+          value: test1
 jobs:
   build:
     runs-on: ubuntu-latest
