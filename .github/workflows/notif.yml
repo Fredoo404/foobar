@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Set right directory for github user 
         run: sudo chown -R github /__w && sudo chmod -R 777 /__w
+      - run: pwd
+      - run: ls -l
       - name: Send notification to slack
         run: notif.py deploy "https://us-central1-deploy-bf216.cloudfunctions.net/displayDeploy" test-call
         env:
