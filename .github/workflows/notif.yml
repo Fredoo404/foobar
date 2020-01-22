@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Set right directory for github user 
         run: sudo chown -R github /__w && sudo chmod -R 777 /__w
-      - run: echo ${{GITHUB_REF#refs/heads/ || 'develop' }}
+      - run: echo ${ GITHUB_REF#refs/heads/ || 'develop' }
         #      - name: Send notification to slack
         #        run: python /home/github/displayDeploy.py deploy "https://us-central1-deploy-bf216.cloudfunctions.net/displayDeploy" test-call admin
         #        env:
