@@ -1,0 +1,16 @@
+name: Trigger deploy 
+on:
+  repository_dispatch:
+      types: foobar-test
+jobs:
+  trigger_deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: fredoo404/build-github
+    steps:
+      - name: Set right directory for github user 
+        run: sudo chown -R github /__w && sudo chmod -R 777 /__w
+      - name: Send notification to slack
+        run: /home/github/notif.py deploy "https://us-central1-deploy-bf216.cloudfunctions.net/displayDeploy" test-call
+        env:
+          BRANCH: ${GITHUB_REF#refs/heads/} 

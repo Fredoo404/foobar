@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: 
-        image: fredoo404/build
+        image: fredoo404/build-github
     steps:
         - name: Fix
           run: sudo chown -R circleci /__w && sudo chmod -R 777 /__w
