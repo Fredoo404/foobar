@@ -10,11 +10,8 @@ jobs:
     steps:
       - name: Set right directory for github user 
         run: sudo chown -R github /__w && sudo chmod -R 777 /__w
-      - run: pwd
-      - run: ls -l
-      - run: ls -l /home/
-      - run: ls -l /home/github
-      - name: Send notification to slack
-        run: python /home/github/displayDeploy.py deploy "https://us-central1-deploy-bf216.cloudfunctions.net/displayDeploy" test-call admin
-        env:
-          BRANCH: ${GITHUB_REF#refs/heads/} 
+      - run: echo ${GITHUB_REF#refs/heads/}
+        #      - name: Send notification to slack
+        #        run: python /home/github/displayDeploy.py deploy "https://us-central1-deploy-bf216.cloudfunctions.net/displayDeploy" test-call admin
+        #        env:
+        #          BRANCH: ${GITHUB_REF#refs/heads/} 
