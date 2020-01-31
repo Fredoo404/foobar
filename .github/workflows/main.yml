@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'test111')"
+    if: "!contains(github.event.head_commit.author.name, 'Frederic BENTOUATI')"
     container: 
         image: fredoo404/build-github
     steps:
