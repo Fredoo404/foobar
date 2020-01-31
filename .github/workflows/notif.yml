@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - master
-  repository_dispatch:
-      types: foobar-test
 jobs:
   trigger_deploy:
     runs-on: ubuntu-latest
