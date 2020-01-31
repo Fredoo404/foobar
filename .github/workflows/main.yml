@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.mail, 'frederic.bentouati@myqaa.com')"
     container: 
         image: fredoo404/build-github
     steps:
