@@ -23,6 +23,7 @@ jobs:
             MY_SECRET_ENV: ${{ github.event.client_payload.migrate || secrets.MY_SECRET_ENV }}
         - name: Hello world 2
           run: echo ${{ github.event.client_payload.migrate || secrets.MY_SECRET_ENV }}
+          if: "!contains(github.event.head_commit.mail, 'frederic.bentouati@myqaa.com')"
         - name: Hello world 3
           run: echo ${GITHUB_REF#refs/heads/}
         - name: Test webhook
