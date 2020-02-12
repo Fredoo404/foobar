@@ -14,7 +14,7 @@ jobs:
           run: sudo chown -R github /__w && sudo chmod -R 777 /__w
         - uses: actions/checkout@v2
           with:
-            ref: develop
+            ref: ${{ github.event.client_payload.branch || 'master' }}
         - name: Test ls 1
           run: ls -l 
         - name: Hello world
