@@ -5,7 +5,7 @@ on:
           - develop
   repository_dispatch:
     types: test
-    ref: test-branch-1
+    ref: master
 jobs:
   build:
     runs-on: ubuntu-latest
