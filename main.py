@@ -1,4 +1,6 @@
 #!/usr/bin/python
 
-print('hello world')
-print('hello world 2')
+import os
+
+value1 = os.environ["MY_SECRET_ENV"]
+print(value1)

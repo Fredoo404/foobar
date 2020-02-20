@@ -1,0 +1,35 @@
+name: my first github action on dev branch
+on: 
+  push:
+      branches:
+          - develop
+  repository_dispatch:
+    types: test
+    ref: test-branch-1
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.author.name, 'Frederic BENTOUATI')"
+    container: 
+        image: fredoo404/build-github
+    steps:
+        - name: Fix
+          run: sudo chown -R github /__w && sudo chmod -R 777 /__w
+        - uses: actions/checkout@v2
+          with:
+            ref: ${{ github.event.client_payload.branch || 'master' }}
+        - name: Test ls 1
+          run: ls -l 
+        - name: Hello world
+          run: python ./main.py
+          env:
+            MY_SECRET_ENV: ${{ github.event.client_payload.migrate || secrets.MY_SECRET_ENV }}
+        - name: Hello world 2
+          run: echo ${{ github.event.client_payload.migrate || secrets.MY_SECRET_ENV }}
+          if: "!contains(github.event.head_commit.message, 'test')"
+        - name: Hello world 3
+          run: echo ${GITHUB_REF#refs/heads/}
+        - name: Test webhook
+          if: github.event.action == 'test-call'
+          run: |
+            echo "hello!!!"
